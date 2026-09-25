@@ -1,0 +1,59 @@
+plugins {
+    id 'fabric-loom' version '1.9.2'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+loom {
+    runs {
+        client {
+            programArgs '--username', 'PhaseDev', '--uuid', '8d5fb635-3fcf-4a62-b7ea-4e8bf281f0e4'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url = 'https://maven.blamejared.com'
+        content { includeGroup 'mezz.jei' }
+    }
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modCompileOnly("mezz.jei:jei-1.21.1-fabric:${project.jei_version}") {
+        transitive = false
+    }
+    modLocalRuntime("mezz.jei:jei-1.21.1-fabric:${project.jei_version}") {
+        transitive = false
+    }
+    modLocalRuntime "maven.modrinth:jade:${project.jade_version}"
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}

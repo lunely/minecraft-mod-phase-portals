@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "phaseportals",
+  "version": "${version}",
+  "name": "Phase Portals",
+  "environment": "*",
+  "mixins": ["phaseportals.client.mixins.json"],
+  "entrypoints": {
+    "main": [
+      "example.phaseportals.PhasePortalsMod"
+    ],
+    "client": [
+      "example.phaseportals.PhasePortalsClient"
+    ],
+    "jei_mod_plugin": [
+      "example.phaseportals.jei.InfusionJeiPlugin"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
