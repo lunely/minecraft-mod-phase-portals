@@ -6,6 +6,8 @@ Phase Portals is designed for modpacks with many dimensions and hard-to-reach wo
 
 The goal is simple: provide a focused teleportation system without requiring a huge technology mod just to get reliable portals.
 
+**Recommended:** Play with JEI installed to easily view Phase Portals recipes.
+
 ## Features
 
 ### Local Teleports
