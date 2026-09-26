@@ -1,10 +1,10 @@
 # Phase Portals
 
-A lightweight Fabric teleportation mod for Minecraft focused on portal networks, energy and convenient travel between dimensions.
+A lightweight Fabric technology mod for Minecraft focused on teleportation, machines, energy and convenient travel between dimensions.
 
-Phase Portals is designed for modpacks with many dimensions and hard-to-reach worlds, especially space-themed setups using mods such as Galacticraft.
+Phase Portals is designed for technology-focused modpacks with many dimensions and hard-to-reach worlds, especially space-themed setups using mods such as Galacticraft.
 
-The goal is simple: provide a focused teleportation system without requiring a huge technology mod just to get reliable portals.
+The goal is simple: provide a compact technological progression around teleportation without requiring a huge technology mod just to get reliable interdimensional travel.
 
 **Recommended:** Play with JEI installed to easily view Phase Portals recipes.
 
